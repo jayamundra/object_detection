@@ -193,6 +193,7 @@ def adjust_learning_rate(args, optimizer, loader, step):
         lr = base_lr * q + end_lr * (1 - q)
     optimizer.param_groups[0]['lr'] = lr * args.base_lr
     optimizer.param_groups[1]['lr'] = lr * args.base_lr
+    return lr * args.base_lr
 
 
 class BarlowTwins(nn.Module):
