@@ -56,6 +56,8 @@ def get_arguments():
                         help='Weight decay')
     parser.add_argument('--lambd', default=0.0051, type=float, metavar='L',
                     help='weight on off-diagonal terms')
+    parser.add_argument('--projector', default='8192-8192-8192', type=str,
+                    metavar='MLP', help='projector MLP')
 
     # Loss
     parser.add_argument("--sim-coeff", type=float, default=25.0,
